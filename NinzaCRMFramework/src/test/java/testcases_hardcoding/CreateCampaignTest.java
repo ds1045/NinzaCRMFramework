@@ -14,7 +14,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class CreateCampaignTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		// Launch Empty WebBrowser and maximize the browser window
 		WebDriver driver = new EdgeDriver();
@@ -69,3 +68,4 @@ public class CreateCampaignTest {
 	}
 
 }
+
