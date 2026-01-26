@@ -18,6 +18,7 @@ public class CreateCampaignTest {
 		// Launch Empty WebBrowser and maximize the browser window
 		WebDriver driver = new EdgeDriver();
 		driver.manage().window().maximize();
+		// Implicit wait for 15 seconds
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
 		driver.get("http://49.249.28.218:8098/"); // Navigate to Ninza CRM application
@@ -68,4 +69,5 @@ public class CreateCampaignTest {
 	}
 
 }
+
 
