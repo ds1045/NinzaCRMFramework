@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -77,7 +78,6 @@ public class BaseClass {
 			prefs.put("profile.password_manager_leak_detection", false);
 			settings.setExperimentalOption("prefs", prefs);
 			settings.addArguments("--headless=new");
-			settings.addArguments("--window-size=1920,1080");
 			settings.addArguments("--start-maximized");
 			settings.addArguments("--disable-gpu");
 			settings.addArguments("--no-sandbox");
@@ -85,6 +85,7 @@ public class BaseClass {
 	        driver = new ChromeDriver(settings);
 	    }
 		sdriver = driver;
+		driver.manage().window().setSize(new Dimension(1920, 1080));
 	}
 	
 	@BeforeMethod(groups = {"smokeTest", "regressionTest"})
