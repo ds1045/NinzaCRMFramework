@@ -10,12 +10,10 @@
           <include name="createCampaignTest"/>
           <include name="configBC"/>
           <include name="configBS"/>
-          <include name="createCampaignWithStatusTest"/>
           <include name="configBM"/>
           <include name="configAC"/>
-          <include name="configBT"/>
           <include name="configAS"/>
-          <include name="createCampaignWithExpectedCloseDateTest"/>
+          <include name="configBT"/>
         </methods>
       </class> <!-- com.ninza.crm.campaigntest.CampaignTest -->
     </classes>
