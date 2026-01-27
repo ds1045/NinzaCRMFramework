@@ -76,6 +76,6 @@ public class ProductPage {
 		price.sendKeys(PRICE);
 		vendorid.click();
 		vendorid.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
-		AddproductBtn.click();
+		wLib.waitAndClick(driver, AddproductBtn);
 	}
 }

@@ -58,7 +58,7 @@ public class CreateCampaignPage {
 		campaignname.sendKeys(campName);
 		TargetSizeTf.clear();
 		wLib.passInput(driver, TargetSizeTf, size);
-		createCampaignSubmitBtn.click();
+		wLib.waitAndClick(driver, createCampaignSubmitBtn);
 	}
 	
 	public void createCampaignWithStatus(String campName, String size, String status) {
@@ -66,7 +66,7 @@ public class CreateCampaignPage {
 		campaignstatus.sendKeys(status);
 		TargetSizeTf.clear();
 		wLib.passInput(driver, TargetSizeTf, size);
-		createCampaignSubmitBtn.click();
+		wLib.waitAndClick(driver, createCampaignSubmitBtn);
 	}
 	
 	public void createCampaignWithExpectedCloseDate(String campName, String size) {
@@ -74,7 +74,7 @@ public class CreateCampaignPage {
 		expectedClosedate.sendKeys(jLib.getRequiredDate(30));
 		TargetSizeTf.clear();
 		wLib.passInput(driver, TargetSizeTf, size);
-		createCampaignSubmitBtn.click();
+		wLib.waitAndClick(driver, createCampaignSubmitBtn);
 	}
 	
 }

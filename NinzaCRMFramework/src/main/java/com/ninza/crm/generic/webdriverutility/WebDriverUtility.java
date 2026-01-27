@@ -42,6 +42,16 @@ public class WebDriverUtility {
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	
+	public void waitAndClick(WebDriver driver, WebElement element) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	    wait.until(ExpectedConditions.elementToBeClickable(element));
+	    
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].scrollIntoView(true);", element);
+	    
+	    js.executeScript("arguments[0].click();", element);
+	}
+	
 	public void select(WebElement element, int index) {
 		Select sel = new Select(element);
 		sel.selectByIndex(index);

@@ -55,29 +55,33 @@ public class BaseClass {
 		Reporter.log("==Launch the Browser==", true);
 		String BROWSER = fLib.getDataFromPropertiesFile("browser");
 		if(BROWSER.equals("chrome")) {
-			ChromeOptions options = new ChromeOptions();
+			ChromeOptions settings = new ChromeOptions();
 			Map<String, Object> prefs = new HashMap<>();
 			prefs.put("profile.password_manager_leak_detection", false);
-			options.setExperimentalOption("prefs", prefs);
-	        options.addArguments("--headless=new");
-	        options.addArguments("--disable-gpu");
-	        options.addArguments("--window-size=1920,1080");
+			settings.setExperimentalOption("prefs", prefs);
+	        settings.addArguments("--headless=new");
+	        settings.addArguments("--disable-gpu");
+	        settings.addArguments("--window-size=1920,1080");
+	        settings.addArguments("--start-maximized");
+	        settings.addArguments("--no-sandbox");
 
-	        driver = new ChromeDriver(options);
+	        driver = new ChromeDriver(settings);
 	    } else if (BROWSER.equals("edge")) {
 			driver = new EdgeDriver();
 		} else if (BROWSER.equals("firefox")) {
 			driver = new FirefoxDriver();
 		} else {
-			ChromeOptions options = new ChromeOptions();
+			ChromeOptions settings = new ChromeOptions();
 			Map<String, Object> prefs = new HashMap<>();
 			prefs.put("profile.password_manager_leak_detection", false);
-			options.setExperimentalOption("prefs", prefs);
-	        options.addArguments("--headless=new");
-	        options.addArguments("--disable-gpu");
-	        options.addArguments("--window-size=1920,1080");
+			settings.setExperimentalOption("prefs", prefs);
+	        settings.addArguments("--headless=new");
+	        settings.addArguments("--disable-gpu");
+	        settings.addArguments("--window-size=1920,1080");
+	        settings.addArguments("--start-maximized");
+	        settings.addArguments("--no-sandbox");
 
-	        driver = new ChromeDriver(options);
+	        driver = new ChromeDriver(settings);
 	    }
 		sdriver = driver;
 	}
