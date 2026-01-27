@@ -21,7 +21,7 @@ public class CampaignTest extends BaseClass {
 
 		// Create Campaign
 		HomePage hp = new HomePage(driver);
-		hp.getCreateCampaignBtn().click();
+		wLib.waitAndClick(driver, hp.getCreateCampaignBtn());
 		CreateCampaignPage cp = new CreateCampaignPage(driver);
 		cp.createCampaign(camp, size);
 	
@@ -44,7 +44,7 @@ public class CampaignTest extends BaseClass {
 		
 		// Create Campaign
 		HomePage hp = new HomePage(driver);
-		hp.getCreateCampaignBtn().click();
+		wLib.waitAndClick(driver, hp.getCreateCampaignBtn());
 		CreateCampaignPage cp = new CreateCampaignPage(driver);
 		cp.createCampaignWithStatus(camp, size, status);
 	
@@ -66,7 +66,7 @@ public class CampaignTest extends BaseClass {
 		
 		// Create Campaign
 		HomePage hp = new HomePage(driver);
-		hp.getCreateCampaignBtn().click();
+		wLib.waitAndClick(driver, hp.getCreateCampaignBtn());
 		CreateCampaignPage cp = new CreateCampaignPage(driver);
 		cp.createCampaignWithExpectedCloseDate(camp, size);
 	
