@@ -1,6 +1,8 @@
 package com.ninza.crm.baseTest;
 
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -54,6 +56,9 @@ public class BaseClass {
 		String BROWSER = fLib.getDataFromPropertiesFile("browser");
 		if(BROWSER.equals("chrome")) {
 			ChromeOptions options = new ChromeOptions();
+			Map<String, Object> prefs = new HashMap<>();
+			prefs.put("profile.password_manager_leak_detection", false);
+			options.setExperimentalOption("prefs", prefs);
 	        options.addArguments("--headless=new");
 	        options.addArguments("--disable-gpu");
 	        options.addArguments("--window-size=1920,1080");
@@ -65,6 +70,9 @@ public class BaseClass {
 			driver = new FirefoxDriver();
 		} else {
 			ChromeOptions options = new ChromeOptions();
+			Map<String, Object> prefs = new HashMap<>();
+			prefs.put("profile.password_manager_leak_detection", false);
+			options.setExperimentalOption("prefs", prefs);
 	        options.addArguments("--headless=new");
 	        options.addArguments("--disable-gpu");
 	        options.addArguments("--window-size=1920,1080");
