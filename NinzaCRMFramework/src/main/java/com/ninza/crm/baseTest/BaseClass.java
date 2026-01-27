@@ -1,15 +1,12 @@
 package com.ninza.crm.baseTest;
 
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -54,31 +51,28 @@ public class BaseClass {
 //	public void configBC(String browser) throws Throwable {
 	public void configBC() throws Throwable {
 		Reporter.log("==Launch the Browser==", true);
-		String BROWSER = fLib.getDataFromPropertiesFile("browser");
-		if(BROWSER.equals("chrome")) {
-			ChromeOptions settings = new ChromeOptions();
-			Map<String, Object> prefs = new HashMap<>();
-			prefs.put("profile.password_manager_leak_detection", false);
-			settings.setExperimentalOption("prefs", prefs);
-	        driver = new ChromeDriver(settings);
-	    } else if (BROWSER.equals("edge")) {
-			driver = new EdgeDriver();
-		} else if (BROWSER.equals("firefox")) {
-			driver = new FirefoxDriver();
-		} else {
-			ChromeOptions settings = new ChromeOptions();
-			Map<String, Object> prefs = new HashMap<>();
-			prefs.put("profile.password_manager_leak_detection", false);
-			settings.setExperimentalOption("prefs", prefs);
-	        driver = new ChromeDriver(settings);
+	    String BROWSER = fLib.getDataFromPropertiesFile("browser");
+	    if (BROWSER.equalsIgnoreCase("chrome")) {
+	        ChromeOptions options = new ChromeOptions();
+	        options.addArguments("--window-size=1920,1080");
+	        options.addArguments("--start-maximized");
+	        options.addArguments("--disable-gpu");
+	        options.addArguments("--no-sandbox");
+	        options.addArguments("--disable-dev-shm-usage");
+	        driver = new ChromeDriver(options);
+	        driver.manage().window().setSize(new Dimension(1920, 1080));
+	    } else if (BROWSER.equalsIgnoreCase("edge")) {
+	        driver = new EdgeDriver();
+	    } else {
+	        driver = new ChromeDriver();
 	    }
-		sdriver = driver;
-		driver.manage().window().setSize(new Dimension(1920, 1080));
+	    sdriver = driver;
 	}
 	
 	@BeforeMethod(groups = {"smokeTest", "regressionTest"})
 	public void configBM() throws Throwable {
 		Reporter.log("==Login to the application==", true);
+		System.out.println("WINDOW SIZE = " + driver.manage().window().getSize());
 		String URL = fLib.getDataFromPropertiesFile("url");
 		String USERNAME = fLib.getDataFromPropertiesFile("username");
 		String PASSWORD = fLib.getDataFromPropertiesFile("password");

@@ -35,6 +35,11 @@ public class WebDriverUtility {
 	    }
 	}
 
+	public void jsClick(WebDriver driver, WebElement element) {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].click();", element);
+	}
+
 	public void maximizeWindow(WebDriver driver) {
 		driver.manage().window().maximize();
 	}
