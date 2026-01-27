@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
@@ -52,14 +53,24 @@ public class BaseClass {
 		Reporter.log("==Launch the Browser==", true);
 		String BROWSER = fLib.getDataFromPropertiesFile("browser");
 		if(BROWSER.equals("chrome")) {
-			driver = new ChromeDriver();
-		} else if (BROWSER.equals("edge")) {
+			ChromeOptions options = new ChromeOptions();
+	        options.addArguments("--headless=new");
+	        options.addArguments("--disable-gpu");
+	        options.addArguments("--window-size=1920,1080");
+
+	        driver = new ChromeDriver(options);
+	    } else if (BROWSER.equals("edge")) {
 			driver = new EdgeDriver();
 		} else if (BROWSER.equals("firefox")) {
 			driver = new FirefoxDriver();
 		} else {
-			driver = new EdgeDriver();
-		}
+			ChromeOptions options = new ChromeOptions();
+	        options.addArguments("--headless=new");
+	        options.addArguments("--disable-gpu");
+	        options.addArguments("--window-size=1920,1080");
+
+	        driver = new ChromeDriver(options);
+	    }
 		sdriver = driver;
 	}
 	

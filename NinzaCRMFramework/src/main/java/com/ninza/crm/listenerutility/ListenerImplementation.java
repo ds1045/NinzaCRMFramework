@@ -60,14 +60,25 @@ public class ListenerImplementation implements ITestListener, ISuiteListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub	
 		String testName = result.getMethod().getMethodName();
-		Date d = new Date();
-		String newDate = d.toString().replace(" ", "_").replace(":", "_");
-		TakesScreenshot ts = (TakesScreenshot) BaseClass.sdriver;
-		String temp = ts.getScreenshotAs(OutputType.BASE64);
-		test.addScreenCaptureFromBase64String(temp, testName+newDate);
-		test.log(Status.FAIL,"=====" + testName + " FAILURE=====");
+	    Date d = new Date();
+	    String newDate = d.toString().replace(" ", "_").replace(":", "_");
+
+	    test.log(Status.FAIL,"=====" + testName + " FAILURE=====");
+
+	    try {
+	        if(BaseClass.sdriver != null) {
+	            TakesScreenshot ts = (TakesScreenshot) BaseClass.sdriver;
+	            String temp = ts.getScreenshotAs(OutputType.BASE64);
+	            test.addScreenCaptureFromBase64String(temp, testName + newDate);
+	        } else {
+	            test.log(Status.WARNING, "Driver was NULL. Screenshot not captured.");
+	        }
+	    } catch (Exception e) {
+	        test.log(Status.WARNING, "Screenshot capture failed: " + e.getMessage());
+	    }
+
 	}
 
 	@Override
