@@ -23,6 +23,7 @@ public class ProductTest extends BaseClass {
 		
 		// Create Campaign
 		HomePage hp = new HomePage(driver);
+		wLib.closeNavbarIfOpen(driver);
 		wLib.waitAndClick(driver, hp.getProduct());
 		ProductPage cp = new ProductPage(driver);
 		cp.addProduct(productName, prodCategory, quant, priceValue);

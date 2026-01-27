@@ -24,6 +24,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebDriverUtility {
 
+	public void closeNavbarIfOpen(WebDriver driver) {
+	    try {
+	        JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript(
+	            "let nav = document.getElementById('navbarNav'); if(nav && nav.classList.contains('show')) nav.classList.remove('show');"
+	        );
+	    } catch (Exception e) {
+	        // ignore
+	    }
+	}
+
 	public void maximizeWindow(WebDriver driver) {
 		driver.manage().window().maximize();
 	}
