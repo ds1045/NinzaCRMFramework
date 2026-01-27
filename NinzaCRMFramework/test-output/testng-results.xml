@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Report Configuration]]>
@@ -23,6 +23,39 @@
       <![CDATA[==Logout of the application==]]>
     </line>
     <line>
+      <![CDATA[==Login to the application==]]>
+    </line>
+    <line>
+      <![CDATA[====<createCampaignWithStatusTest>==SUCCESS==]]>
+    </line>
+    <line>
+      <![CDATA[==Logout of the application==]]>
+    </line>
+    <line>
+      <![CDATA[==Login to the application==]]>
+    </line>
+    <line>
+      <![CDATA[====<createCampaignWithExpectedCloseDateTest>==SUCCESS==]]>
+    </line>
+    <line>
+      <![CDATA[==Logout of the application==]]>
+    </line>
+    <line>
+      <![CDATA[==Close the Browser==]]>
+    </line>
+    <line>
+      <![CDATA[==Launch the Browser==]]>
+    </line>
+    <line>
+      <![CDATA[==Login to the application==]]>
+    </line>
+    <line>
+      <![CDATA[====<createProductWithMandatoryFieldTest>==SUCCESS==]]>
+    </line>
+    <line>
+      <![CDATA[==Logout of the application==]]>
+    </line>
+    <line>
       <![CDATA[==Close the Browser==]]>
     </line>
     <line>
@@ -32,74 +65,119 @@
       <![CDATA[==Close the DB, Report Backup==]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-01-27T13:16:55 IST" name="Default suite" finished-at="2026-01-27T13:17:01 IST" duration-ms="6073">
+  <suite started-at="2026-01-27T14:55:04 IST" name="Suite" finished-at="2026-01-27T14:55:34 IST" duration-ms="30097">
     <groups>
       <group name="regressionTest">
-        <method signature="CampaignTest.createCampaignTest()[pri:1, instance:com.ninza.crm.campaigntest.CampaignTest@510f3d34]" name="createCampaignTest" class="com.ninza.crm.campaigntest.CampaignTest"/>
+        <method signature="CampaignTest.createCampaignTest()[pri:1, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" name="createCampaignTest" class="com.ninza.crm.campaigntest.CampaignTest"/>
+        <method signature="CampaignTest.createCampaignWithStatusTest()[pri:2, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" name="createCampaignWithStatusTest" class="com.ninza.crm.campaigntest.CampaignTest"/>
+        <method signature="CampaignTest.createCampaignWithExpectedCloseDateTest()[pri:3, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" name="createCampaignWithExpectedCloseDateTest" class="com.ninza.crm.campaigntest.CampaignTest"/>
       </group> <!-- regressionTest -->
       <group name="smokeTest">
-        <method signature="CampaignTest.createCampaignTest()[pri:1, instance:com.ninza.crm.campaigntest.CampaignTest@510f3d34]" name="createCampaignTest" class="com.ninza.crm.campaigntest.CampaignTest"/>
+        <method signature="ProductTest.createProductWithMandatoryFieldTest()[pri:0, instance:com.ninza.crm.producttest.ProductTest@b2c9a9c]" name="createProductWithMandatoryFieldTest" class="com.ninza.crm.producttest.ProductTest"/>
+        <method signature="CampaignTest.createCampaignTest()[pri:1, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" name="createCampaignTest" class="com.ninza.crm.campaigntest.CampaignTest"/>
       </group> <!-- smokeTest -->
     </groups>
-    <test started-at="2026-01-27T13:16:55 IST" name="Default test" finished-at="2026-01-27T13:17:01 IST" duration-ms="6073">
+    <test started-at="2026-01-27T14:55:04 IST" name="Test" finished-at="2026-01-27T14:55:34 IST" duration-ms="30097">
       <class name="com.ninza.crm.campaigntest.CampaignTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@510f3d34]" started-at="2026-01-27T13:16:55 IST" name="configBS" finished-at="2026-01-27T13:16:55 IST" duration-ms="164" status="PASS">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:04 IST" name="configBS" finished-at="2026-01-27T14:55:04 IST" duration-ms="240" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==Connect to DB, Report Config==]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBT()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@510f3d34]" started-at="2026-01-27T13:16:55 IST" name="configBT" finished-at="2026-01-27T13:16:55 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="configBT()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:04 IST" name="configBT" finished-at="2026-01-27T14:55:04 IST" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==Pre Conditions==]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBT -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@510f3d34]" started-at="2026-01-27T13:16:55 IST" name="configBC" finished-at="2026-01-27T13:16:56 IST" duration-ms="1168" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:04 IST" name="configBC" finished-at="2026-01-27T14:55:07 IST" duration-ms="2442" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==Launch the Browser==]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@510f3d34]" started-at="2026-01-27T13:16:56 IST" name="configBM" finished-at="2026-01-27T13:16:57 IST" duration-ms="1258" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:07 IST" name="configBM" finished-at="2026-01-27T14:55:09 IST" duration-ms="2622" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==Login to the application==]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="createCampaignTest()[pri:1, instance:com.ninza.crm.campaigntest.CampaignTest@510f3d34]" started-at="2026-01-27T13:16:57 IST" name="createCampaignTest" finished-at="2026-01-27T13:17:00 IST" duration-ms="2286" status="PASS">
+        <test-method signature="createCampaignTest()[pri:1, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:09 IST" name="createCampaignTest" finished-at="2026-01-27T14:55:14 IST" duration-ms="4256" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[====<createCampaignTest>==SUCCESS==]]>
             </line>
           </reporter-output>
         </test-method> <!-- createCampaignTest -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@510f3d34]" started-at="2026-01-27T13:17:00 IST" name="configAM" finished-at="2026-01-27T13:17:01 IST" duration-ms="1032" status="PASS">
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:14 IST" name="configAM" finished-at="2026-01-27T14:55:15 IST" duration-ms="1667" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==Logout of the application==]]>
             </line>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@510f3d34]" started-at="2026-01-27T13:17:01 IST" name="configAC" finished-at="2026-01-27T13:17:01 IST" duration-ms="297" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:15 IST" name="configBM" finished-at="2026-01-27T14:55:17 IST" duration-ms="2019" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==Login to the application==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createCampaignWithStatusTest()[pri:2, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:17 IST" name="createCampaignWithStatusTest" finished-at="2026-01-27T14:55:19 IST" duration-ms="2221" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====<createCampaignWithStatusTest>==SUCCESS==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createCampaignWithStatusTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:20 IST" name="configAM" finished-at="2026-01-27T14:55:21 IST" duration-ms="1341" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==Logout of the application==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:21 IST" name="configBM" finished-at="2026-01-27T14:55:23 IST" duration-ms="1707" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==Login to the application==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createCampaignWithExpectedCloseDateTest()[pri:3, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:23 IST" name="createCampaignWithExpectedCloseDateTest" finished-at="2026-01-27T14:55:25 IST" duration-ms="2128" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====<createCampaignWithExpectedCloseDateTest>==SUCCESS==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createCampaignWithExpectedCloseDateTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:25 IST" name="configAM" finished-at="2026-01-27T14:55:26 IST" duration-ms="1383" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==Logout of the application==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:26 IST" name="configAC" finished-at="2026-01-27T14:55:26 IST" duration-ms="337" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==Close the Browser==]]>
             </line>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAT()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@510f3d34]" started-at="2026-01-27T13:17:01 IST" name="configAT" finished-at="2026-01-27T13:17:01 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="configAT()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:34 IST" name="configAT" finished-at="2026-01-27T14:55:34 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==Post Conditions==]]>
             </line>
           </reporter-output>
         </test-method> <!-- configAT -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@510f3d34]" started-at="2026-01-27T13:17:01 IST" name="configAS" finished-at="2026-01-27T13:17:01 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.ninza.crm.campaigntest.CampaignTest@61322f9d]" started-at="2026-01-27T14:55:34 IST" name="configAS" finished-at="2026-01-27T14:55:34 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==Close the DB, Report Backup==]]>
@@ -107,6 +185,43 @@
           </reporter-output>
         </test-method> <!-- configAS -->
       </class> <!-- com.ninza.crm.campaigntest.CampaignTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.ninza.crm.producttest.ProductTest">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.ninza.crm.producttest.ProductTest@b2c9a9c]" started-at="2026-01-27T14:55:26 IST" name="configBC" finished-at="2026-01-27T14:55:28 IST" duration-ms="1592" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==Launch the Browser==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.ninza.crm.producttest.ProductTest@b2c9a9c]" started-at="2026-01-27T14:55:28 IST" name="configBM" finished-at="2026-01-27T14:55:30 IST" duration-ms="1637" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==Login to the application==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createProductWithMandatoryFieldTest()[pri:0, instance:com.ninza.crm.producttest.ProductTest@b2c9a9c]" started-at="2026-01-27T14:55:30 IST" name="createProductWithMandatoryFieldTest" finished-at="2026-01-27T14:55:33 IST" duration-ms="3227" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====<createProductWithMandatoryFieldTest>==SUCCESS==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createProductWithMandatoryFieldTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.ninza.crm.producttest.ProductTest@b2c9a9c]" started-at="2026-01-27T14:55:33 IST" name="configAM" finished-at="2026-01-27T14:55:34 IST" duration-ms="1157" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==Logout of the application==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.ninza.crm.producttest.ProductTest@b2c9a9c]" started-at="2026-01-27T14:55:34 IST" name="configAC" finished-at="2026-01-27T14:55:34 IST" duration-ms="257" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==Close the Browser==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+      </class> <!-- com.ninza.crm.producttest.ProductTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

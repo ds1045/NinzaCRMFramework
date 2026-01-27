@@ -60,13 +60,6 @@ public class BaseClass {
 			Map<String, Object> prefs = new HashMap<>();
 			prefs.put("profile.password_manager_leak_detection", false);
 			settings.setExperimentalOption("prefs", prefs);
-			settings.addArguments("--headless=new");
-			settings.addArguments("--window-size=1920,1080");
-			settings.addArguments("--start-maximized");
-			settings.addArguments("--disable-gpu");
-			settings.addArguments("--no-sandbox");
-			settings.addArguments("--disable-dev-shm-usage");
-
 	        driver = new ChromeDriver(settings);
 	    } else if (BROWSER.equals("edge")) {
 			driver = new EdgeDriver();
@@ -77,11 +70,6 @@ public class BaseClass {
 			Map<String, Object> prefs = new HashMap<>();
 			prefs.put("profile.password_manager_leak_detection", false);
 			settings.setExperimentalOption("prefs", prefs);
-			settings.addArguments("--headless=new");
-			settings.addArguments("--start-maximized");
-			settings.addArguments("--disable-gpu");
-			settings.addArguments("--no-sandbox");
-			settings.addArguments("--disable-dev-shm-usage");
 	        driver = new ChromeDriver(settings);
 	    }
 		sdriver = driver;
