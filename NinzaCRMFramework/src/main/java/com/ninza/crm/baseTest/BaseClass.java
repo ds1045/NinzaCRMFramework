@@ -4,11 +4,11 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -65,10 +65,12 @@ public class BaseClass {
 	        options.addArguments("--no-sandbox");
 	        options.addArguments("--disable-dev-shm-usage");
 	        driver = new ChromeDriver(options);
-	        driver.manage().window().setSize(new Dimension(1920, 1080));
 	    } else if (BROWSER.equalsIgnoreCase("edge")) {
 	        driver = new EdgeDriver();
-	    } else {
+	    } else if (BROWSER.equalsIgnoreCase("firefox")) {
+	        driver = new FirefoxDriver();
+	    }
+	    else {
 	    		ChromeOptions options = new ChromeOptions();
 	        Map<String, Object> prefs = new HashMap<>();
 	        prefs.put("profile.password_manager_leak_detection", false);
@@ -86,7 +88,6 @@ public class BaseClass {
 	@BeforeMethod(groups = {"smokeTest", "regressionTest"})
 	public void configBM() throws Throwable {
 		Reporter.log("==Login to the application==", true);
-		System.out.println("WINDOW SIZE = " + driver.manage().window().getSize());
 		String URL = fLib.getDataFromPropertiesFile("url");
 		String USERNAME = fLib.getDataFromPropertiesFile("username");
 		String PASSWORD = fLib.getDataFromPropertiesFile("password");
