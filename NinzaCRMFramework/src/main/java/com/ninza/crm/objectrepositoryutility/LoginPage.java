@@ -5,8 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.ninza.crm.generic.webdriverutility.WebDriverUtility;
+
 public class LoginPage {
 	WebDriver driver;
+	WebDriverUtility wLib = new WebDriverUtility();
 	
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -35,6 +38,8 @@ public class LoginPage {
 	}
 	
 	public void Login(String url, String username, String password) {
+		wLib.maximizeWindow(driver);
+		wLib.waitForPageToLoad(driver);
 		driver.get(url);
 		UN.sendKeys(username);
 		PWD.sendKeys(password);
