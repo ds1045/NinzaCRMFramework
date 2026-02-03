@@ -65,7 +65,6 @@ public class HomePage {
 		return closemsg;
 	}
 	
-	
 	public void Logout() {
 		wLib.clickOnWebElement(driver, userIcon);
 		wLib.clickOnWebElement(driver, logoutBtn);
